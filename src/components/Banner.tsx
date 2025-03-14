@@ -2,11 +2,11 @@ import Image from "next/image";
 
 export default function Banner() {
   return (
-    <div className="relative w-screen h-2/6 overflow-hidden p-1">
+    <div className="relative w-screen h-1/2 overflow-hidden p-1">
       <Image
         src="/image/banner.jpg"
         alt="cover"
-        fill={true}
+        fill
         priority
         className="object-cover"
       />
