@@ -30,7 +30,14 @@ export default function CardPanel() {
     }
   }
 
-  const [ratings, dispatchRatings] = useReducer(ratingsReducer, new Map());
+  const [ratings, dispatchRatings] = useReducer(
+    ratingsReducer,
+    new Map([
+      ["The Bloom Pavilion", 0],
+      ["Spark Space", 0],
+      ["The Grand Table", 0],
+    ]),
+  );
 
   function handleSetRatings(venueName: string, newValue: number) {
     dispatchRatings({
